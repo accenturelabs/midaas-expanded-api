@@ -79,7 +79,7 @@ The two letter postal abbreviation...
 
 ID | Description
 ---|------------
-0 | Undefined
+0 | No Education Defined
 1 | No High School
 2 | High School
 3 | GED
@@ -94,7 +94,7 @@ ID | Description
 
 ID | Description
 ---|------------
-0 | Undefined
+0 | No Industry Defined
 11 | Management
 13 | Business and Financial Operations
 15 | Computer and Mathematical
@@ -121,9 +121,16 @@ ID | Description
 99 | Unemployed with no work experience in last 5 years or never worked
 
 #### `occuptation`
+Occupation IDs are split by industry for ease of access
+
+##### No Industry Defined
 ID | Description
 ---|------------
-0 | Undefined
+0 | No Occupation Defined
+
+##### Management
+ID | Description
+---|------------
 11-0000 | Management Occupations:
 11-10XX | Chief executives and legislators
 11-1011 | Chief executives
@@ -157,6 +164,10 @@ ID | Description
 11-9061 | Funeral service managers
 11-9131 | Postmasters and mail superintendents
 11-9199 | Managers, all other
+
+##### Business and Financial Operations
+ID | Description
+---|------------
 13-0000 | Business and Financial Operations Occupations:
 13-1011 | Agents and business managers of artists, performers, and athletes
 13-1021 | Buyers and purchasing agents, farm products
@@ -186,6 +197,10 @@ ID | Description
 13-2081 | Tax examiners and collectors, and revenue agents
 13-2082 | Tax preparers
 13-2099 | Financial specialists, all other
+
+##### Computer and Mathematical
+ID | Description
+---|------------
 15-0000 | Computer and mathematical occupations:
 15-1111 | Computer and information research scientists
 15-1121 | Computer systems analysts
@@ -204,6 +219,10 @@ ID | Description
 15-2021 | Mathematicians
 15-2041 | Statisticians
 15-2090 | Miscellaneous mathematical science occupations
+
+##### Architecture and Engineering
+ID | Description
+---|------------
 17-0000 | Architecture and Engineering Occupations:
 17-1010 | Architects, except naval
 17-1020 | Surveyors, cartographers, and photogrammetrists
@@ -229,6 +248,10 @@ ID | Description
 17-3010 | Drafters
 17-3020 | Engineering technicians, except drafters
 17-3031 | Surveying and mapping technicians
+
+##### Life, Physical, and Social Science
+ID | Description
+---|------------
 19-0000 | Life, Physical, and Social Science Occupations:
 19-1010 | Agricultural and food scientists
 19-1020 | Biological scientists
@@ -257,6 +280,10 @@ ID | Description
 19-40YY | Miscellaneous life, physical, and social science technicians, including social science research assistants
 19-4061 | Social science research assistants
 19-4090 | Miscellaneous life, physical, and social science technicians
+
+##### Community and Social Service
+ID | Description
+---|------------
 21-0000 | Community and Social Service Occupations:
 21-1010 | Counselors
 21-1020 | Social workers
@@ -266,6 +293,10 @@ ID | Description
 21-2011 | Clergy
 21-2021 | Directors, religious activities and education
 21-2099 | Religious workers, all other
+
+##### Legal
+ID | Description
+---|------------
 23-0000 | Legal Occupations:
 23-10XX | Lawyers, and judges, magistrates, and other judicial workers
 23-1011 | Lawyers
@@ -273,6 +304,10 @@ ID | Description
 23-1012 | Judicial law clerks
 23-2011 | Paralegals and legal assistants
 23-2090 | Miscellaneous legal support workers
+
+##### Education, Training, and Library
+ID | Description
+---|------------
 25-0000 | Education, Training, and Library Occupations:
 25-1000 | Postsecondary teachers
 25-2010 | Preschool and kindergarten teachers
@@ -289,6 +324,10 @@ ID | Description
 25-9021 | Farm and home management advisors
 25-9031 | Instructional coordinators
 25-9099 | Education, training, and library workers, all others
+
+##### Arts, Design, Entertainment, Sports, and Media
+ID | Description
+---|------------
 27-0000 | Arts, Design, Entertainment, Sports, and Media Occupations:
 27-1010 | Artists and related workers
 27-1020 | Designers
@@ -310,6 +349,10 @@ ID | Description
 27-4099 | Media and communication equipment workers, all other
 27-4021 | Photographers
 27-4030 | Television, video, and motion picture camera operators and editors
+
+##### Healthcare Practitioners and Technical
+ID | Description
+---|------------
 29-0000 | Healthcare Practitioners and Technical Occupations:
 29-1011 | Chiropractors
 29-1020 | Dentists
@@ -346,6 +389,10 @@ ID | Description
 29-2081 | Opticians, dispensing
 29-2090 | Miscellaneous health technologists and technicians
 29-9000 | Other healthcare practitioners and technical occupations
+
+##### Healthcare Support
+ID | Description
+---|------------
 31-0000 | Healthcare Support Occupations:
 31-1010 | Nursing, psychiatric, and home health aides
 31-2010 | Occupational therapy assistants and aides
@@ -360,6 +407,10 @@ ID | Description
 31-909X | Healthcare support workers, all other, including medical equipment preparers
 31-9093 | Medical equipment preparers
 31-9099 | Healthcare support workers, all other
+
+##### Protective Service
+ID | Description
+---|------------
 33-0000 | Protective Service Occupations:
 33-1011 | First-line supervisors of correctional officers
 33-1012 | First-line supervisors of police and detectives
@@ -383,6 +434,10 @@ ID | Description
 33-909X | Lifeguards and other recreational, and all other protective service workers
 33-9092 | Lifeguards, ski patrol, and other recreational protective service workers
 33-9099 | Protective service workers, all other
+
+##### Food Preparation and Serving Related
+ID | Description
+---|------------
 35-0000 | Food Preparation and Serving Related Occupations:
 35-1011 | Chefs and head cooks
 35-1012 | First-line supervisors of food preparation and serving workers
@@ -398,6 +453,10 @@ ID | Description
 35-9099 | Food preparation and serving related workers, all other
 35-9021 | Dishwashers
 35-9031 | Hosts and hostesses, restaurant, lounge, and coffee shop
+
+##### Building and Grounds Cleaning and Maintenance
+ID | Description
+---|------------
 37-0000 | Building and Grounds Cleaning and Maintenance Occupations:
 37-1011 | First-line supervisors of housekeeping and janitorial workers
 37-1012 | First-line supervisors of landscaping, lawn service, and groundskeeping workers
@@ -407,6 +466,10 @@ ID | Description
 37-2012 | Maids and housekeeping cleaners
 37-2021 | Pest control workers
 37-3010 | Grounds maintenance workers
+
+##### Personal Care and Service
+ID | Description
+---|------------
 39-0000 | Personal Care and Service Occupations:
 39-1010 | First-line supervisors of gaming workers
 39-1021 | First-line supervisors of personal service workers
@@ -427,7 +490,11 @@ ID | Description
 39-9021 | Personal care aides
 39-9030 | Recreation and fitness workers
 39-9041 | Residential advisors
-39-9099 | Personal care and service workers, all other 
+39-9099 | Personal care and service workers, all other
+
+##### Sales and Related
+ID | Description
+---|------------
 41-0000 | Sales and Related Occupations:
 41-1011 | First-line supervisors of retail sales workers
 41-1012 | First-line supervisors of non-retail sales workers
@@ -447,6 +514,10 @@ ID | Description
 41-9041 | Telemarketers
 41-9091 | Door-to-door sales workers, news and street vendors, and related workers
 41-9099 | Sales and related workers, all other
+
+##### Office and Administrative Support
+ID | Description
+---|------------
 43-0000 | Office and Administrative Support Occupations:
 43-1011 | First-line supervisors of office and administrative support workers
 43-2011 | Switchboard operators, including answering service
@@ -502,6 +573,10 @@ ID | Description
 43-9XXX | Miscellaneous office and administrative support workers, including desktop publishers
 43-9031 | Desktop publishers
 43-9199 | Office and administrative support workers, all other
+
+##### Farming, Fishing, and Forestry
+ID | Description
+---|------------
 45-0000 | Farming, Fishing, and Forestry Occupations:
 45-1011 | First-line supervisors of farming, fishing, and forestry workers
 45-2011 | Agricultural inspectors
@@ -514,6 +589,10 @@ ID | Description
 45-3021 | Hunters and trappers
 45-4011 | Forest and conservation workers
 45-4020 | Logging workers
+
+##### Construction and Extraction
+ID | Description
+---|------------
 47-0000 | Construction and Extraction Occupations:
 47-1011 | First-line supervisors of construction trades and extraction workers
 47-2011 | Boilermakers
@@ -561,6 +640,10 @@ ID | Description
 47-50XX | Other extraction workers
 47-5051 | Rock splitters, quarry
 47-5099 | Extraction workers, all others
+
+##### Installation, Maintenance, and Repair
+ID | Description
+---|------------
 49-0000 | Installation, Maintenance, and Repair Occupations:
 49-1011 | First-line supervisors of mechanics, installers, and repairers
 49-2011 | Computer, automated teller, and office machine repairers
@@ -607,6 +690,10 @@ ID | Description
 49-909X | Other installation, maintenance, and repair workers
 49-9093 | Fabric menders, except garment
 49-9099 | Installation, maintenance, and repair workers, all other
+
+##### Production
+ID | Description
+---|------------
 51-0000 | Production Occupations:
 51-1011 | First-line supervisors of production and operating workers
 51-2011 | Aircraft structure, surfaces, rigging, and systems assemblers
@@ -694,6 +781,10 @@ ID | Description
 51-9141 | Semiconductor processors
 51-9193 | Cooling and freezing equipment operators and tenders
 51-9199 | Production workers, all other
+
+##### Transportation and Material Moving
+ID | Description
+---|------------
 53-0000 | Transportation and Material Moving Occupations:
 53-1000 | Supervisors of transportation and material moving workers
 53-2010 | Aircraft pilots and flight engineers
@@ -740,8 +831,16 @@ ID | Description
 53-7111 | Mine shuttle car operators
 53-7121 | Tank car, truck, and ship loaders
 53-7199 | Material moving workers, all other
+
+##### Military Specific
+ID | Description
+---|------------
 55-1010 | Military officer special and tactical operations leaders
 55-2010 | First-line enlisted military supervisors
 55-3010 | Military enlisted tactical operations and air/weapons specialists and crew members
 559830 | Military, rank not specified
+
+##### Unemployed with no work experience in last 5 years or never worked
+ID | Description
+---|------------
 999920 | Unemployed, with no work experience in the last 5 years or earlier or never worked
