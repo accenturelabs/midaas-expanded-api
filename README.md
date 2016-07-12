@@ -6,7 +6,7 @@ Extension of the [middas-API](https://github.com/CommerceDataService/midaas-api)
 
 ## API Documentation
 
-### [GET] /quantiles
+### [GET] /quantiles.php
 **query params**:  `state, race, sex, agegroup, education, industry` _(see below for options)_<br>
 **response format**:  `{'<quantile>':  <income>}`<br>
 **example**:
