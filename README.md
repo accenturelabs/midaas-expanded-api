@@ -44,7 +44,7 @@ The two letter postal abbreviation...
 "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
 "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
 "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
-"WV", "WI", "WY"
+"WV", "WI", "WY", "PR", "undefined"
 ```
 
 #### `race`
@@ -53,7 +53,8 @@ The two letter postal abbreviation...
 "white",
 "african american",
 "hispanic",
-"asian"
+"asian",
+"other"
 ```
 
 #### `sex`
@@ -71,13 +72,15 @@ The two letter postal abbreviation...
 "35-44",
 "45-54",
 "55-64",
-"65+"
+"65+",
+"undefined"
 ```
 
 #### `education`
 
 ID | Description
 ---|------------
+0 | Undefined
 1 | No High School
 2 | High School
 3 | GED
@@ -92,6 +95,7 @@ ID | Description
 
 ID | Description
 ---|------------
+0 | Undefined
 11 | Management
 13 | Business and Financial Operations
 15 | Computer and Mathematical
@@ -120,6 +124,7 @@ ID | Description
 #### `occuptation`
 ID | Description
 ---|------------
+0 | Undefined
 11-0000 | Management Occupations:
 11-10XX | Chief executives and legislators
 11-1011 | Chief executives
