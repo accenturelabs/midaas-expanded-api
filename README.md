@@ -33,7 +33,7 @@ curl http://54.226.19.203/quantiles.php?state=MD
 The query parameters **`state, race, sex, agegroup`** match the [middas-API](https://github.com/CommerceDataService/midaas-api) definitions.
 Both **`education, industry`** are new query options and their values are defined below.
 
-#### `state`
+#### state
 
 The two letter postal abbreviation...
 
@@ -47,7 +47,7 @@ The two letter postal abbreviation...
 "WV", "WI", "WY", "PR", "undefined"
 ```
 
-#### `race`
+#### race
 
 ```
 "white",
@@ -57,14 +57,14 @@ The two letter postal abbreviation...
 "other"
 ```
 
-#### `sex`
+#### sex
 
 ```
 "male",
 "female"
 ```
 
-#### `agegroup`
+#### agegroup
 
 ```
 "18-24",
@@ -75,7 +75,7 @@ The two letter postal abbreviation...
 "65+"
 ```
 
-#### `education`
+#### education
 
 ID | Description
 ---|------------
@@ -90,7 +90,7 @@ ID | Description
 8 | Professionals Degree
 9 | Doctorate Degree
 
-#### `industry`
+#### industry
 
 ID | Description
 ---|------------
@@ -120,7 +120,7 @@ ID | Description
 55 | Military Specific
 99 | Unemployed with no work experience in last 5 years or never worked
 
-#### `occuptation`
+#### occuptation
 Occupation IDs are split by industry for ease of access
 
 ##### No Industry Defined
