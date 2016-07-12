@@ -2,7 +2,7 @@
 
 ## Overview
 
-Extension of the [middas-API](https://github.com/CommerceDataService/midaas-api) with education and industry data
+Extension of the [midaas-API](https://github.com/CommerceDataService/midaas-api) with education and industry data
 
 ## API Documentation
 
@@ -30,7 +30,7 @@ curl http://54.226.19.203/quantiles.php?state=MD
 
 ### Query Parameter Options
 
-The query parameters **`state, race, sex, agegroup`** match the [middas-API](https://github.com/CommerceDataService/midaas-api) definitions.
+The query parameters **`state, race, sex, agegroup`** match the [midaas-API](https://github.com/CommerceDataService/midaas-api) definitions.
 Both **`education, industry`** are new query options and their values are defined below.
 
 #### state
