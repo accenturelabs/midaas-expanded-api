@@ -72,8 +72,7 @@ The two letter postal abbreviation...
 "35-44",
 "45-54",
 "55-64",
-"65+",
-"undefined"
+"65+"
 ```
 
 #### `education`
