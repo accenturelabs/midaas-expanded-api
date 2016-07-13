@@ -31,7 +31,7 @@ curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=af
 ### Query Parameter Options
 
 The query parameters **`state, race, sex, agegroup`** match the [midaas-API](https://github.com/CommerceDataService/midaas-api) definitions and should be entered as plaintext *without* quotes, see the example above.
-**`education, industry, occupation`** are new query options and their values are defined below. **NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time. Occupation implies that the industry is known so the data is not available (an error message will be returned in this case).
+**`education, industry, occupation`** are new query options and their values are defined below. **NOTE:** if both parameters **`industry, occupation`** are specified the **`industry`** parameter will be ignored; occupation implies that the industry is known.
 
 #### state
 
@@ -92,7 +92,7 @@ ID | Description
 
 #### industry
 
-**NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time.
+**NOTE:** if both parameters **`industry, occupation`** are specified the **`industry`** parameter will be ignored; occupation implies that the industry is known.
 
 ID | Description
 ---|------------
@@ -123,7 +123,7 @@ ID | Description
 99 | Unemployed with no work experience in last 5 years or never worked
 
 #### occuptation
-Occupation IDs are split by industry for ease of access. **NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time.
+Occupation IDs are split by industry for ease of access. **NOTE:** if both parameters **`industry, occupation`** are specified the **`industry`** parameter will be ignored; occupation implies that the industry is known.
 
 ##### No Industry Defined
 ID | Description
