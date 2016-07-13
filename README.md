@@ -15,7 +15,7 @@ Plesae report any trouble with the API or questions as [Issues](https://github.c
 **response format**:  `{'<quantile>':  <income>}`<br>
 **example**:
 ```
-curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&industry=29
+curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&industry=29
 {
   "5%":"8000",
   "10%":"20300",
@@ -35,7 +35,7 @@ curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=af
 Results of `null` indicate no data for this query.<br>
 **example**:
 ```
-curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&occupation=29000
+curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&occupation=29000
 {
   "5%":null,
   "10%":null,
