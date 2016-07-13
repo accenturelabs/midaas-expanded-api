@@ -7,31 +7,31 @@ Extension of the [midaas-API](https://github.com/CommerceDataService/midaas-api)
 ## API Documentation
 
 ### [GET] /quantiles.php
-**query params**:  `state, race, sex, agegroup, education, industry` _(see below for options)_<br>
+**query params**:  `state, race, sex, agegroup, education, industry, occupation` _(see below for options)_<br>
 **response format**:  `{'<quantile>':  <income>}`<br>
 **example**:
 ```
-curl http://54.226.19.203/quantiles.php?state=MD
+curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&industry=29&state=MD
 {
-  "5%": 480,
-  "10%": 3000,
-  "20%": 10000,
-  "30%": 15000,
-  "40%": 20200,
-  "50%": 27000,
-  "60%": 35000,
-  "70%": 43500,
-  "80%": 55000,
-  "90%": 79000,
-  "95%": 102000,
-  "99%": 311000
+  "5%":"45000",
+  "10%":"45000",
+  "20%":"47100",
+  "30%":"51200",
+  "40%":"60700",
+  "50%":"63800",
+  "60%":"90200",
+  "70%":"107100",
+  "80%":"147100",
+  "90%":"210000",
+  "95%":"210000",
+  "99%":"210000"
 }
 ```
 
 ### Query Parameter Options
 
-The query parameters **`state, race, sex, agegroup`** match the [midaas-API](https://github.com/CommerceDataService/midaas-api) definitions.
-Both **`education, industry`** are new query options and their values are defined below.
+The query parameters **`state, race, sex, agegroup`** match the [midaas-API](https://github.com/CommerceDataService/midaas-api) definitions and should be entered as plaintext *without* quotes, see the example above.
+**`education, industry, occupation`** are new query options and their values are defined below. **NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time. Occupation implies that the industry is known so the data is not available (an error message will be returned in this case).
 
 #### state
 
@@ -92,6 +92,8 @@ ID | Description
 
 #### industry
 
+**NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time.
+
 ID | Description
 ---|------------
 0 | No Industry Defined
@@ -121,7 +123,7 @@ ID | Description
 99 | Unemployed with no work experience in last 5 years or never worked
 
 #### occuptation
-Occupation IDs are split by industry for ease of access
+Occupation IDs are split by industry for ease of access. **NOTE:** the query parameters of **`industry, occupation`** cannot be used at the same time.
 
 ##### No Industry Defined
 ID | Description
