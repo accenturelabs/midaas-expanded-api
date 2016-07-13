@@ -11,22 +11,43 @@ Extension of the [midaas-API](https://github.com/CommerceDataService/midaas-api)
 **response format**:  `{'<quantile>':  <income>}`<br>
 **example**:
 ```
-curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&industry=29&state=MD
+curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&industry=29
 {
-  "5%":"45000",
-  "10%":"45000",
-  "20%":"47100",
-  "30%":"51200",
-  "40%":"60700",
-  "50%":"63800",
-  "60%":"90200",
-  "70%":"107100",
-  "80%":"147100",
-  "90%":"210000",
-  "95%":"210000",
-  "99%":"210000"
+  "5%":"8000",
+  "10%":"20300",
+  "20%":"40000",
+  "30%":"50000",
+  "40%":"62300",
+  "50%":"74100",
+  "60%":"85000",
+  "70%":"100000",
+  "80%":"108200",
+  "90%":"121500",
+  "95%":"136400",
+  "99%":"297800"
 }
 ```
+#### `null` Results
+Results of `null` indicate no data for this query.<br>
+**example**:
+```
+curl http://54.226.19.203/quantiles.php?education=9&age=25-34&sex=female&race=african american&occupation=29000
+{
+  "5%":null,
+  "10%":null,
+  "20%":null,
+  "30%":null,
+  "40%":null,
+  "50%":null,
+  "60%":null,
+  "70%":null,
+  "80%":null,
+  "90%":null,
+  "95%":null,
+  "99%":null
+}
+```
+**SOLUTION:** Instead of searching for the occupation grouping `29000`, try searching the full industry of `29`
 
 ### Query Parameter Options
 
