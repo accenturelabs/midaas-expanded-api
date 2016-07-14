@@ -17,76 +17,79 @@
     </style>
 
     <title>midaas-enhanced-api Demo</title>
-    <script type='text/javascript'>
-      var api = "https://gpfm1hpw75.execute-api.us-east-1.amazonaws.com/prod/income/quantiles?";
-      var xLabel = "Percentile";
-      var yLabel = "Earnings ($s)";
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+var api = "https://gpfm1hpw75.execute-api.us-east-1.amazonaws.com/prod/income/quantiles?";
+var xLabel = "Percentile";
+var yLabel = "Earnings ($s)";
 
-      // Listeners to update chart when options are selected
-      $('input:radio').change(function() {
-        getCompareData($(this).val(), $('#state').val());
-      });
-      $('#state').change(function() {
-        getCompareData($('input:radio:checked').val(), $(this).val());
-      });
+// Listeners to update chart when options are selected
+$('input:radio').change(function() {
+  getCompareData($(this).val(),$('#state').val());
+});
+$('#state').change(function() {
+  getCompareData($('input:radio:checked').val(),$(this).val());
+});
 
-      // Load initial chart on page open
-      document.onload = getCompareData('overall', null);
+// Load initial chart on page open
+document.onload = getCompareData('overall',null);
 
-      // Fetch data for chart from API and pass to chart for redering
-      function getCompareData(comp, state) {
-        // If overall is selected do not send compare parameter
-        var url;
-        if (comp == 'overall') {
-          url = api;
-        } else {
-          // Specify compare attribute
-          url = api + "compare=" + comp;
-        }
-        // Process state param
-        if (state && state != "") {
-          url += "&state=" + state;
-        }
-
-        // Use jQuery to get JSON data from API
-        $.getJSON(url, function(data) {
-          var cols = [];
-          // Grab the names of the categories
-          for (c in data) {
-            var col = [c],
-              i = 1;
-            // Grab the values for the current category
-            for (k in data[c]) {
-              col[i++] = data[c][k];
-            }
-            cols.push(col);
-          }
-          // Draw the chart
-          drawChart(cols);
-        });
+// Fetch data for chart from API and pass to chart for redering
+function getCompareData(comp,state) {
+  // If overall is selected do not send compare parameter
+  var url;
+  if (comp == 'overall') {
+    url = api;
+  } else {
+    // Specify compare attribute
+    url = api + "compare=" + comp;
+  }
+  // Process state param
+  if (state && state != "") {
+    url += "&state="+state;
+  }
+  
+  // Use jQuery to get JSON data from API
+  $.getJSON(url, function(data) {
+    var cols = [];
+    // Grab the names of the categories
+    for (c in data) {
+      var col = [c],
+        i = 1;
+      // Grab the values for the current category
+      for (k in data[c]) {
+        col[i++] = data[c][k];
       }
+      cols.push(col);
+    }
+    // Draw the chart
+    drawChart(cols);
+  });
+}
 
-      // Use c3.js to create chart of data (http://c3js.org for docs)
-      function drawChart(cols) {
-        var chart = c3.generate({
-          data: {
-            columns: cols,
-            type: 'bar'
-          },
-          axis: {
-            x: {
-              label: xLabel,
-              type: 'category',
-              categories: ['5%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '95%', '99%']
-            },
-            y: {
-              label: yLabel
-            }
-          }
-        });
+// Use c3.js to create chart of data (http://c3js.org for docs)
+function drawChart(cols) {
+  var chart = c3.generate({
+    data: {
+      columns: cols,
+      type: 'bar'
+    },
+    axis: {
+      x: {
+        label: xLabel,
+        type: 'category',
+        categories: ['5%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '95%', '99%']
+      },
+      y: {
+        label: yLabel
       }
+    }
+  });
+}
 
-    </script>
+}//]]> 
+
+</script>
   </head>
 
   <body>
