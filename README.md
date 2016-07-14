@@ -17,7 +17,7 @@ Plesae report any trouble with the API or questions as [Issues](https://github.c
 ```
 curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&industry=29
 {
-  overall: {
+  "overall": {
     "5%":  8000,
     "10%": 20300,
     "20%": 40000,
