@@ -17,38 +17,42 @@ Plesae report any trouble with the API or questions as [Issues](https://github.c
 ```
 curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&industry=29
 {
-  "5%":"8000",
-  "10%":"20300",
-  "20%":"40000",
-  "30%":"50000",
-  "40%":"62300",
-  "50%":"74100",
-  "60%":"85000",
-  "70%":"100000",
-  "80%":"108200",
-  "90%":"121500",
-  "95%":"136400",
-  "99%":"297800"
+  overall: {
+    "5%":  8000,
+    "10%": 20300,
+    "20%": 40000,
+    "30%": 50000,
+    "40%": 62300,
+    "50%": 74100,
+    "60%": 85000,
+    "70%": 100000,
+    "80%": 108200,
+    "90%": 121500,
+    "95%": 136400,
+    "99%": 297800
+  }
 }
 ```
-#### What are `null` Results?
-Results of `null` indicate no data for this query.<br>
+#### What are `0` Results?
+Results of all `0` indicate no data for this query.<br>
 **example**:
 ```
 curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&occupation=29000
 {
-  "5%":null,
-  "10%":null,
-  "20%":null,
-  "30%":null,
-  "40%":null,
-  "50%":null,
-  "60%":null,
-  "70%":null,
-  "80%":null,
-  "90%":null,
-  "95%":null,
-  "99%":null
+  "overall": {
+    "5%":  0,
+    "10%": 0,
+    "20%": 0,
+    "30%": 0,
+    "40%": 0,
+    "50%": 0,
+    "60%": 0,
+    "70%": 0,
+    "80%": 0,
+    "90%": 0,
+    "95%": 0,
+    "99%": 0
+  }
 }
 ```
 **SOLUTION:** Instead of searching for the occupation grouping `29000`, try searching the full industry of `29`
