@@ -56,11 +56,13 @@ function getCompareData(comp,state) {
     for (c in data) {
       var col = [c],
         i = 1;
-      // Grab the values for the current category
-      for (k in data[c]) {
-        col[i++] = data[c][k];
+      if (c != "count") {
+        // Grab the values for the current category
+        for (k in data[c]) {
+          col[i++] = data[c][k];
+        }
+        cols.push(col);
       }
-      cols.push(col);
     }
     // Draw the chart
     drawChart(cols);
