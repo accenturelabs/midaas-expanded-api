@@ -12,7 +12,17 @@ Plesae report any trouble with the API or questions as [Issues](https://github.c
 
 ### [GET] /quantiles.php
 **query params**:  `state, race, sex, agegroup, education, industry, occupation` _(see below for options)_<br>
-**response format**:  `{'<quantile>':  <income>}`<br>
+**response format**:  
+```
+{
+  "overall": {
+    "<quantile>":  <income>, 
+    "<quantile>":  <income>, 
+    ...
+    "<count>": <number of incomes sampled> 
+  }
+}
+```
 **example**:
 ```
 curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&race=african american&industry=29
@@ -29,7 +39,8 @@ curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&ra
     "80%": 108200,
     "90%": 121500,
     "95%": 136400,
-    "99%": 297800
+    "99%": 297800,
+    "count": 130
   }
 }
 ```
@@ -51,7 +62,8 @@ curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&ra
     "80%": 0,
     "90%": 0,
     "95%": 0,
-    "99%": 0
+    "99%": 0,
+    "count": 0
   }
 }
 ```
