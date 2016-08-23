@@ -69,6 +69,57 @@ curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&sex=female&ra
 ```
 **SOLUTION:** Instead of searching for the occupation grouping `29000`, try searching the full industry of `29`
 
+### Comparing Results
+
+To make accessing the data easier the following groups can be compared, which returns all options for these parameters **`race, sex, agegroup, education`**
+
+#### Query Parameter for Comparison
+To use this function pass the parameter **`compare`** with any of these options
+```
+"race",
+"sex",
+"agegroup",
+"education"
+```
+
+#### Sex Comparison Example
+**example**:
+```
+curl http://54.226.19.203/quantiles.php?education=9&agegroup=25-34&race=african%20american&industry=29&compare=sex
+{
+  "male": {
+    "5%": 13900,
+    "10%": 23600,
+    "20%": 39800,
+    "30%": 40200,
+    "40%": 50000,
+    "50%": 53000,
+    "60%": 88600,
+    "70%": 112900,
+    "80%": 126100,
+    "90%": 181200,
+    "95%": 222500,
+    "99%": 371000,
+    "count": 51
+  },
+  "female": {
+    "5%": 8000,
+    "10%": 20300,
+    "20%": 40000,
+    "30%": 50000,
+    "40%": 62300,
+    "50%": 74100,
+    "60%": 85000,
+    "70%": 100000,
+    "80%": 108200,
+    "90%": 121500,
+    "95%": 136400,
+    "99%": 297800,
+    "count": 130
+  }
+}
+```
+
 ### Query Parameter Options
 
 The query parameters **`state, race, sex, agegroup`** match the [midaas-API](https://github.com/CommerceDataService/midaas-api) definitions and should be entered as plaintext *without* quotes, see the example above.
