@@ -19,7 +19,7 @@ Plesae report any trouble with the API or questions as [Issues](https://github.c
     "<quantile>":  <income>, 
     "<quantile>":  <income>, 
     ...
-    "<count>": <number of incomes sampled> 
+    "count": <number of incomes sampled> 
   }
 }
 ```
